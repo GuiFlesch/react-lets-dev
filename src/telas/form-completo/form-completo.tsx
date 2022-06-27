@@ -1,6 +1,9 @@
 import React, { FormEvent } from 'react';
 import * as s from "./styled-form-completo"
-import {Logo} from "../../imagens"
+import { Banner } from "../../imagens"
+import Titulo from '../../componentes/Titulo';
+import { Row, ColumnInput, Label, RowSelectors } from '../../componentes';
+
 
 
 // import { Container } from './styles';
@@ -30,44 +33,43 @@ const FormCompleto: React.FC = () => {
     };
 
     return (
-        
+        <>
+        <s.Image src={Banner} alt="Imagem Let's Dev"/>
         <s.Container>
-        <h1>Formulário 2ª Edição</h1>
+        <Titulo titulo="Formulário 2ª edição"/>
 
-        <h2>
+        <s.H2>
             Seja bem-vindo(a) ao primeiro desafio da sua jornada de aprendizado!
-        </h2>
-        <p id="instrucao">
+        </s.H2>
+        <s.Instrucao>
             Preencha corretamente os campos abaixo para ingressar nessa SUPER JORNADA com o time Paipe!
-        </p>
+        </s.Instrucao>
 
-        <img src={Logo} alt="Imagem Let's Dev" />
-
-        <hr />
+        <s.Divisor/>
 
         {/*Aqui começam os itens agrupados em coluna*/}
-        <form onSubmit={enviarFormulario}>
-            <p id="aviso">
+        <s.Formulario onSubmit={enviarFormulario}>
+            <s.Aviso>
                 <strong>ATENÇÃO: </strong> os campos contendo o asterisco (*) são de preenchimento obrigatório!
-            </p>
+            </s.Aviso>
 
             {/*Aqui começam os inputs de digitação.*/}
-            <div className="row">
-                <div className="column-input input-text">
-                    <label htmlFor="">Nome completo: *</label>
+            <Row>
+                <ColumnInput className="input-text">
+                    <Label htmlFor="">Nome completo: *</Label>
                     <input type="text" name="nome" placeholder="Digite seu nome aqui" required />
-                </div>
+                </ColumnInput>
 
-                <div className="column-input">
+                <ColumnInput>
                     <label htmlFor="">Idade:</label>
                     <input type="number" name="idade" placeholder="Digite sua idade" />
-                </div>
-            </div>
+                </ColumnInput>
+            </Row>
 
             {/* Aqui começam os inputs de seleção */}
-            <div className="row">
-                <div className="column-input select">
-                    <label htmlFor="">Ocupação:</label>
+            <Row>
+                <ColumnInput className="select">
+                    <Label htmlFor="">Ocupação:</Label>
                     <select name="ocupacao" id="">
                         <option>Selecione sua ocupação</option>
                         <option>Estudante</option>
@@ -76,57 +78,58 @@ const FormCompleto: React.FC = () => {
                         <option>Autônomo</option>
                         <option>Outros</option>
                     </select>
-                </div>
+                </ColumnInput>
 
                 {/*Aqui continuam os inputs de seleção*/}
-                <div className="column-input">
-                    <label htmlFor="">Área de preferência:</label>
+                <ColumnInput>
+                    <Label htmlFor="">Área de preferência:</Label>
 
-                    <div className="row" style={{ gap: '25px' }}>
-                        <div className="row-selectors">
+                    <Row style={{ gap: '25px' }}>
+                        <RowSelectors>
                             <input type="radio" id="front" name="area-preferencia" value="Front-end" checked />
 
-                            <label htmlFor="front">Front-end</label>
-                        </div>
-                        <div className="row-selectors">
+                            <Label htmlFor="front">Front-end</Label>
+                        </RowSelectors>
+                        <RowSelectors>
                             <input type="radio" id="back" name="area-preferencia" value="Back-end" />
 
-                            <label htmlFor="back">Back-end</label>
-                        </div>
+                            <Label htmlFor="back">Back-end</Label>
+                        </RowSelectors>
 
-                        <div className="row-selectors">
+                        <RowSelectors>
                             <input type="radio" id="full" name="area-preferencia" value="Full stack" />
 
-                            <label htmlFor="full">Full stack</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            <Label htmlFor="full">Full stack</Label>
+                        </RowSelectors>
+                    </Row>
+                </ColumnInput>
+            </Row>
 
             {/*Aqui começam os botões, textarea e checkbox*/}
-            <div className="column-input">
-                <label htmlFor="">Anexar currículo</label>
+            <ColumnInput>
+                <Label htmlFor="">Anexar currículo</Label>
                 <input type="file" />
-            </div>
+            </ColumnInput>
 
-            <div className="column-input" style={{ marginBottom: '50px' }}>
-                <label htmlFor="">Descrição do perfil do candidato:</label>
+            <ColumnInput style={{ marginBottom: '50px' }}>
+                <Label htmlFor="">Descrição do perfil do candidato:</Label>
                 <textarea name="descricao-perfil"
                     placeholder="Nos fale um pouco sobre o seu perfil pessoal e profissional"></textarea>
-            </div>
+            </ColumnInput>
 
-            <div className="column-input" style={{ marginBottom: '115px' }}>
-                <div className="row-selectors">
+            <ColumnInput style={{ marginBottom: '115px' }}>
+                <RowSelectors>
                     <input type="checkbox" name="receber-email" id="receber-email" />
-                    <label htmlFor="receber-email">Desejo receber notificações sobre vagas por e-mail</label>
-                </div>
-            </div>
-            <div className="row" style={{ justifyContent: 'space-between' }}>
+                    <Label htmlFor="receber-email">Desejo receber notificações sobre vagas por e-mail</Label>
+                </RowSelectors>
+            </ColumnInput>
+            <Row style={{ justifyContent: 'space-between' }}>
                 <button onClick={cancelar}>Cancelar</button>
                 <input type="submit" value="Enviar" />
-            </div>
-        </form>
+            </Row>
+        </s.Formulario>
     </s.Container>
+    </>
     );
 }
 

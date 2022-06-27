@@ -51,6 +51,7 @@ form p#aviso {
 }
 
 form p#aviso strong{
+    color: #bd041a;
     font-weight: 600;
 }
 
