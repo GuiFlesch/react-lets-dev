@@ -2,7 +2,7 @@ import React, { FormEvent } from 'react';
 import * as s from "./styled-form-completo"
 import { Banner } from "../../imagens"
 import Titulo from '../../componentes/Titulo';
-import { Row, ColumnInput, Label, RowSelectors } from '../../componentes';
+import { Row, ColumnInput, Label, RowSelectors, InputButton } from '../../componentes';
 
 
 
@@ -108,7 +108,7 @@ const FormCompleto: React.FC = () => {
             {/*Aqui começam os botões, textarea e checkbox*/}
             <ColumnInput>
                 <Label htmlFor="">Anexar currículo</Label>
-                <input type="file" />
+                <InputButton type="file" />
             </ColumnInput>
 
             <ColumnInput style={{ marginBottom: '50px' }}>
@@ -124,8 +124,8 @@ const FormCompleto: React.FC = () => {
                 </RowSelectors>
             </ColumnInput>
             <Row style={{ justifyContent: 'space-between' }}>
-                <button onClick={cancelar}>Cancelar</button>
-                <input type="submit" value="Enviar" />
+                <InputButton type="button" onClick={cancelar} value="cancelar"/>
+                <InputButton type="submit" value="Enviar" />
             </Row>
         </s.Formulario>
     </s.Container>
