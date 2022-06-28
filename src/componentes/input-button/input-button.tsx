@@ -4,7 +4,7 @@ import * as s from "./styled-input-button"
 
 interface InputButtonProps {
     type?: "file" | "submit" | "button";
-    name?: "string";
+    name?: string;
     value?: any;
     onChange?: (event: any) => void;
     outlined?: boolean;
