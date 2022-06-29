@@ -6,6 +6,7 @@ interface InputButtonProps {
 
 export const InputButton = styled.input<InputButtonProps>`
 
+text-align: center;
 &[type="submit"],
 &::-webkit-file-upload-button,
 &.outlined {

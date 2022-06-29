@@ -7,7 +7,7 @@ const AsyncAwait: React.FC = () => {
     const [minhaFotoDePerfil, setMinhaFotoDePerfil] = useState();
 
     axios.get("https://api.github.com/users/GuiFlesch")
-        .then((dados) => { setMinhaFotoDePerfil(dados.data.avatar_url)})
+        .then((dados) => { setMinhaFotoDePerfil(dados.data.html_url)})
         .catch((erro) => { console.log(erro) })
         .finally(() => { console.log("Acabou") })
 
@@ -27,7 +27,7 @@ const AsyncAwait: React.FC = () => {
 
     return (
         <div>
-            <img src={minhaFotoDePerfil} alt="" />
+            <h1>{minhaFotoDePerfil}</h1>
         </div>
     );
 }
