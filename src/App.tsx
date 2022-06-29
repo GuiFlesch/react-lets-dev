@@ -1,10 +1,13 @@
-import { FormBasico, FormCompleto } from "./telas";
+import { AsyncAwait, Callback, FormBasico, FormCompleto } from "./telas";
+import Promisses from "./telas/chamadas-api/promisses";
 
 
 function App() {
   
   return (
     <>
+    <AsyncAwait/>
+      <Callback/>
       <FormCompleto/>
     </>
   );

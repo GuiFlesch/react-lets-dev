@@ -1,0 +1,15 @@
+{
+    "profs": [
+        {
+            "nome": "Guilherme",
+            "idade:": 30
+        },
+        {
+            "nome": "Sofia",
+            "idade": 31
+        }
+    ],
+    "aula": "Aula 5",
+    "modelo": "Videochamada",
+    "url": "https://api.github.com/users/uesleisuptitz"
+}
