@@ -12,7 +12,7 @@ function App() {
   useEffect(()=>{
     if(!nomeUsuario){
       let nomeDoLocalStorage = localStorage.getItem('nomeUsuario')
-      if(!nomeDoLocalStorage){
+      if(nomeDoLocalStorage){
         setNomeUsuario(nomeDoLocalStorage)
       }else{
       let nomeInformado = prompt("Qual o seu nome?")

@@ -54,7 +54,7 @@ const FormBasico: React.FC = () => {
       Preencha corretamente os campos abaixo para ingressar nessa SUPER JORNADA com o time Paipe!
     </p>
 
-    <img src={ Logo } alt="Imagem Let's Dev" />
+    <img src={ Logo } alt="Imagem Let's Dev" title="Banner Let's Dev" />
 
     <hr />
 

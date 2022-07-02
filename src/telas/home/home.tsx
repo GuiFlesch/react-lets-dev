@@ -13,7 +13,7 @@ import MyContext from "../../contexto";
 const Home = () => {
 
   const { setNomeUsuario, nomeUsuario} = useContext(MyContext);
-  console.log(nomeUsuario);
+  
 
   const telas = [
     {
@@ -55,7 +55,8 @@ const Home = () => {
       <Header />
       <s.Banner>
         <h1>Que prazer te ver aqui, {nomeUsuario}!</h1>
-        <img src={Logo} />
+        <InputButton type="button" onClick={()=>{localStorage.removeItem('nomeUsuario')}} value="Remover" outlined/>
+        <img src={Logo} alt="Banner let's dev" title="Banner let's dev"/>
         <h2>
           Seja bem-vindo(a) ao Let’s Dev! O evento que vai transformar sua
           carreira.
@@ -81,9 +82,9 @@ const Home = () => {
         <TituloSecao titulo="Um pouco sobre mim..." />
 
         <s.Row>
-          <img src={Logo} />
+          <img src={Logo} title="Foto linda do Guilherme" alt="Mostra um retrato da perfeição" />
           <s.Column>
-            <h3>Aqui vai o nome do(a) Dev</h3>
+            <h3>Guilherme Augusto Flesch</h3>
             <p>
               Este espaço é destinado à sua descrição de perfil. Conta aqui quem
               você é, gostos, hobbies e o que achar interessante. Descreve

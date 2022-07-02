@@ -42,7 +42,7 @@ const FormCompleto: React.FC = () => {
 
     return (
         <>
-            <s.Image src={Banner} alt="Imagem Let's Dev" />
+            <s.Image src={Banner} alt="Imagem Let's Dev" title="Banner Let's Dev" />
             <s.Container>
                 <Titulo titulo="Formulário 2ª edição" />
 

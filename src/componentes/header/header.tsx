@@ -5,10 +5,10 @@ const Header = () => {
   return (
     <s.Header>
       <a href="/">
-        <img src={LogoLetsDev} />
+        <img src={LogoLetsDev} title="Voltar para a página inicial" alt="logo-let's-dev" />
       </a>
       <a href="https://www.paipe.co" target="_blank" rel="noopener noreferrer">
-        <img src={LogoPaipe} />
+        <img src={LogoPaipe} title="Acessar o site da Paipe" alt="logo-paipe" />
       </a>
     </s.Header>
   );

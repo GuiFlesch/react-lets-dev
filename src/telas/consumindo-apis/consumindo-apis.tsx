@@ -1,7 +1,16 @@
 import * as s from "./styled-consumindo-apis";
 import { ColumnInput, Footer, Header, InputButton } from "../../componentes";
+import axios from "axios";
+import { useEffect } from "react";
 
 const ConsumindoApis = () => {
+
+  
+
+  axios.get("https://viacep.com.br/ws/")
+  .then((dados)=>{console.log(dados)})
+  .catch((erro)=>{console.log(erro)})
+  .finally(()=>{"acabou"})
   return (
     <s.Container>
       <Header />
