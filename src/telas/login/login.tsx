@@ -18,7 +18,7 @@ const Login: React.FC = () => {
                 </s.LoginFormTitle>
                 <ColumnInput className="input-text">    
                     <Label htmlFor="">Email: </Label>
-                    <input
+                    <s.Input
                     type="email"
                     name="email"
                     placeholder="Digite seu email aqui"
@@ -27,7 +27,7 @@ const Login: React.FC = () => {
                     onChange={(evento) =>{setEmail(evento.target.value)}} />
 
                     <Label htmlFor="">Senha:</Label>
-                    <input
+                    <s.Input
                     type="password"
                     name="password"
                     placeholder="Digite sua senha"
