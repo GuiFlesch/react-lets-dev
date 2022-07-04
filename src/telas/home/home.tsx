@@ -51,9 +51,11 @@ const Home = () => {
   ];
 
   return (
+    
     <s.Container>
       <Header />
       <s.Banner>
+        
         <h1>Que prazer te ver aqui, {nomeUsuario}!</h1>
         <InputButton type="button" onClick={()=>{localStorage.removeItem('nomeUsuario')}} value="Remover" outlined/>
         <img src={Logo} alt="Banner let's dev" title="Banner let's dev"/>
@@ -100,18 +102,21 @@ const Home = () => {
                 outlined
                 type="button"
                 value="LinkedIn"
+                
                 onClick={() => {
                   //Aqui vai o seu perfil do linkedIn
-                  window.open("https://www.linkedin.com", "_blank");
+                  window.open("https://linkedin.com/in/guilhermeflesch92", "_blank");
                 }}
+                title="Vai para o perfil do linkedin."
               />
               <InputButton
                 type="submit"
                 value="Ver perfil"
                 onClick={() => {
                   //Aqui vai o seu perfil do GitHub
-                  window.open("https://github.com", "_blank");
+                  window.open("https://github.com/GuiFlesch", "_blank");
                 }}
+                title="Vai para o perfil do github."
               />
             </s.ButtonGroup>
           </s.Column>

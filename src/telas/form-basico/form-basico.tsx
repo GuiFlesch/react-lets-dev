@@ -95,7 +95,7 @@ const FormBasico: React.FC = () => {
         <div className="column-input">
           <label htmlFor="">Área de preferência:</label>
 
-          <div className="row" style={{gap: '25px'}}>
+          <div className="row" style={{gap: '1.5625rem'}}>
             <div className="row-selectors">
               <input type="radio" id="front" name="area-preferencia" value="Front-end" checked />
 
@@ -122,13 +122,13 @@ const FormBasico: React.FC = () => {
         <input type="file"/>
       </div>
 
-      <div className="column-input" style={{marginBottom: '50px'}}>
+      <div className="column-input" style={{marginBottom: '3.125rem'}}>
         <label htmlFor="">Descrição do perfil do candidato:</label>
         <textarea name="descricao-perfil"
           placeholder="Nos fale um pouco sobre o seu perfil pessoal e profissional"></textarea>
       </div>
 
-      <div className="column-input" style={{marginBottom: '115px'}}>
+      <div className="column-input" style={{marginBottom: '7.1875rem'}}>
         <div className="row-selectors">
           <input type="checkbox" name="receber-email" id="receber-email"/>
             <label htmlFor="receber-email">Desejo receber notificações sobre vagas por e-mail</label>

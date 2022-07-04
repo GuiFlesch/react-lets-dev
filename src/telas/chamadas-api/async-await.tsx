@@ -4,10 +4,10 @@ import axios from "axios";
 // import { Container } from './styles';
 
 const AsyncAwait: React.FC = () => {
-    const [minhaFotoDePerfil, setMinhaFotoDePerfil] = useState();
+    const [minhaFotoDePerfil, setMinhaFotoDePerfil] = useState("");
 
     axios.get("https://api.github.com/users/GuiFlesch")
-        .then((dados) => { setMinhaFotoDePerfil(dados.data.html_url)})
+        .then((dados) => { setMinhaFotoDePerfil(dados.data.avatar_url)})
         .catch((erro) => { console.log(erro) })
         .finally(() => { console.log("Acabou") })
 
@@ -27,7 +27,7 @@ const AsyncAwait: React.FC = () => {
 
     return (
         <div>
-            <h1>{minhaFotoDePerfil}</h1>
+            {minhaFotoDePerfil}
         </div>
     );
 }

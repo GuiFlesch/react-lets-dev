@@ -6,12 +6,13 @@ interface CardProps {
   titulo: string;
   link: string;
   descricao: string | ReactNode;
+  title?: string;
 }
 
 const Card = ({ titulo, link, descricao }: CardProps) => {
   return (
     <s.Container href={link}>
-      <img src={Logo} alt="Imagem Let's Dev" />
+      <img src={Logo} alt="Imagem Let's Dev" title={"vai para " + titulo}/>
       <a href={link}>{titulo}</a>
       {typeof descricao === "string" ? <p>{descricao}</p> : descricao}
     </s.Container>

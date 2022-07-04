@@ -5,10 +5,10 @@
     align-items: center;
 
     /* Limita o conteúdo para caber nos notebooks */
-    max-width: 1200px;
+    max-width: 75rem;
 
     /* Espaço interno dos elementos */
-    padding: 90px;
+    padding: 5.625rem;
 }
 
 #container h1 {
@@ -16,7 +16,7 @@
     font-weight: 600;
     font-style: italic;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 3.75rem;
 }
 
 #container h2 {
@@ -25,18 +25,18 @@
 
 #container p#instrucao {
     text-align: center;
-    margin: 20px 0 60px 0;
+    margin: 1.25rem 0 3.75rem 0;
 }
 
 #container img {
-    width: 600px;
+    width: 37.5rem;
 }
 
 #container hr {
     background: #e5e5e5;
-    height: 1px;
+    height: 0.0625rem;
     width: 100%;
-    margin: 100px 0 35px 0;
+    margin: 6.25rem 0 2.1875rem 0;
 }
 
 #container form {

@@ -10,11 +10,11 @@ text-align: center;
 &[type="submit"],
 &::-webkit-file-upload-button,
 &.outlined {
-    width: 225px;
-    padding: 10px;
-    height: 35px;
+    width: 14.0625rem;
+    padding: 0.625rem;
+    height: 2.1875rem;
     font-weight: 500;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     cursor: pointer;
 }
 
@@ -25,18 +25,18 @@ text-align: center;
     border: none !important;
 
     :hover {
-        box-shadow: 1px 2px 5px rgba(0,0,0.5);
+        box-shadow: 0.0625rem 0.125rem 0.3125rem rgba(0,0,0.5);
     }
 }
 
 &::-webkit-file-upload-button,
 &.outlined {
-    border: 1px solid #7d2eba;
+    border: 0.0625rem solid #7d2eba;
     color: #7d2eba;
     background: none;
     font-family: Montserrat;
 
-    margin-right: 30px;
+    margin-right: 1.875rem;
 
     :hover {
         background: #7d2eba;

@@ -1,21 +1,21 @@
-*{
+* {
     /* Config padrão que se repete em todo o site*/
 
-padding: 0;
-margin: 0;
-border: 0;
-box-sizing: border-box;
-outline: none;
-text-decoration: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
 
-/* A fonte para todo o site, com opções, caso a primeira não esteja disponível */
+    /* A fonte para todo o site, com opções, caso a primeira não esteja disponível */
 
-font-family: "Montserrat", -apple-system, "Roboto", sans-serif;
+    font-family: "Montserrat", -apple-system, "Roboto", sans-serif;
 
-/* Poderia ir nos estilos de texto específico */
+    /* Poderia ir nos estilos de texto específico */
 
-color: #201e1f;
-font-weight: 400;
+    color: #201e1f;
+    font-weight: 400;
 }
 
 body {
@@ -25,9 +25,33 @@ body {
     justify-content: center;
 }
 
-body #root{
+body #root {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media (min-width: 992px) {
+    html {
+        font-size: 100%;    
+    }
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 95%
+    }
+}
+
+@media (max-width: 767px) {
+    html {
+        font-size: 85%
+    }
+}
+
+@media (max-width: 479px){
+    html{
+        font-size: 75%
+    }
 }

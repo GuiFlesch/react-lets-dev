@@ -14,7 +14,7 @@ function Titulo({ titulo }: TituloProps) {
       fontWeight: 600,
       fontStyle: "italic",
       textAlign: "center",
-      marginBottom: "60px",
+      marginBottom: "3.75rem",
     }}
   >
     {titulo}

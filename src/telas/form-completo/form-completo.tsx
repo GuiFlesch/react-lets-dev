@@ -15,7 +15,7 @@ const FormCompleto: React.FC = () => {
     const [idade, setIdade] = useState("");
     const [ocupacao, setOcupacao] = useState("");
     const [areaPreferencia, setAreaPreferencia] = useState("Front-end");
-    const [curriculo, setCurriculo] = useState("");
+    const [curriculo, setCurriculo] = useState<any>("");
     const [descricaoPerfil, setDescricaoPerfil] = useState("");
     const [receberEmail, setReceberEmail] = useState(false);
 
@@ -105,7 +105,7 @@ const FormCompleto: React.FC = () => {
                         <ColumnInput>
                             <Label htmlFor="">Área de preferência:</Label>
 
-                            <Row style={{ gap: '25px' }}>
+                            <Row style={{ gap: '1.5625rem' }}>
                                 <RowSelectors>
                                     <input
                                         type="radio"
@@ -151,7 +151,7 @@ const FormCompleto: React.FC = () => {
                             onChange={(e) => setCurriculo(e.target?.files[0])} />
                     </ColumnInput>
 
-                    <ColumnInput style={{ marginBottom: '50px' }}>
+                    <ColumnInput style={{ marginBottom: '3.125rem' }}>
                         <Label htmlFor="">Descrição do perfil do candidato:</Label>
                         <textarea name="descricao-perfil"
                             placeholder="Nos fale um pouco sobre o seu perfil pessoal e profissional"
@@ -159,7 +159,7 @@ const FormCompleto: React.FC = () => {
                             onChange={(e) => setDescricaoPerfil(e.target.value)} ></textarea>
                     </ColumnInput>
 
-                    <ColumnInput style={{ marginBottom: '115px' }}>
+                    <ColumnInput style={{ marginBottom: '7.1875rem' }}>
                         <RowSelectors>
                             <input
                                 type="checkbox"
