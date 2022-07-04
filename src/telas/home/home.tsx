@@ -6,7 +6,8 @@ import {
   Card,
   InputButton,
 } from "../../componentes";
-import { Logo } from "../../imagens";
+
+import { FotoDePerfil, Logo } from "../../imagens";
 import { useContext, useEffect } from "react";
 import MyContext from "../../contexto";
 
@@ -84,7 +85,7 @@ const Home = () => {
         <TituloSecao titulo="Um pouco sobre mim..." />
 
         <s.Row>
-          <img src={Logo} title="Foto linda do Guilherme" alt="Mostra um retrato da perfeição" />
+          <img src={ FotoDePerfil } title="Foto linda do Guilherme" alt="Mostra um retrato da perfeição" />
           <s.Column>
             <h3>Guilherme Augusto Flesch</h3>
             <p>

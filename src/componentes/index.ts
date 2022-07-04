@@ -7,6 +7,8 @@ import Footer from "./footer/footer";
 import Header from "../componentes/header/header";
 import TituloSecao from "../componentes/titulo-secao/titulo-secao";
 import Card from "../componentes/card/card";
+import InputTelaLogin from "./input-login/input-tela-login";
 
 
-export {Row, ColumnInput, Label, RowSelectors, InputButton, Footer, Header, TituloSecao, Card};
+
+export {Row, ColumnInput, Label, RowSelectors, InputButton, Footer, Header, TituloSecao, Card, InputTelaLogin};
