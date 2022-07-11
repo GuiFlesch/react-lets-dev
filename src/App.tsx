@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MyContext from "./contexto";
-import { FormBasico, FormCompleto, Home, ConsumindoApis } from "./telas";
-import Promisses from "./telas/chamadas-api/promisses";
-import Login from "./telas/login/login";
+import { FormBasico, FormCompleto, Home, ConsumindoApis, SobrePaipers } from "./telas";
+
+
 
 
 function App() {
@@ -29,10 +29,10 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
       <Route path="/form-basico" element={<FormBasico/>} />
       <Route path="/form-completo" element={<FormCompleto />} />
       <Route path="/consumindo-apis" element={<ConsumindoApis />} />
+      <Route path="/sobre-paipers" element={<SobrePaipers />} />
      
       </Routes>
     </BrowserRouter>

@@ -13,8 +13,8 @@ import MyContext from "../../contexto";
 
 const Home = () => {
 
-  const { setNomeUsuario, nomeUsuario} = useContext(MyContext);
-  
+  const { setNomeUsuario, nomeUsuario } = useContext(MyContext);
+
 
   const telas = [
     {
@@ -52,14 +52,14 @@ const Home = () => {
   ];
 
   return (
-    
+
     <s.Container>
       <Header />
       <s.Banner>
-        
+
         <h1>Que prazer te ver aqui, {nomeUsuario}!</h1>
-        <InputButton type="button" onClick={()=>{localStorage.removeItem('nomeUsuario')}} value="Remover" outlined/>
-        <img src={Logo} alt="Banner let's dev" title="Banner let's dev"/>
+        <InputButton type="button" onClick={() => { localStorage.removeItem('nomeUsuario') }} value="Remover nome"outlined />
+        <img src={Logo} alt="Banner let's dev" title="Banner let's dev" />
         <h2>
           Seja bem-vindo(a) ao Let’s Dev! O evento que vai transformar sua
           carreira.
@@ -75,6 +75,7 @@ const Home = () => {
         <s.GroupCards>
           {telas.map((card) => (
             <Card
+              key={card.titulo}
               titulo={card.titulo}
               link={card.link}
               descricao={card.descricao}
@@ -85,25 +86,24 @@ const Home = () => {
         <TituloSecao titulo="Um pouco sobre mim..." />
 
         <s.Row>
-          <img src={ FotoDePerfil } title="Foto linda do Guilherme" alt="Mostra um retrato da perfeição" />
+          <img src={FotoDePerfil} title="Foto linda do Guilherme" alt="Mostra um retrato da perfeição" />
           <s.Column>
             <h3>Guilherme Augusto Flesch</h3>
             <p>
-              Este espaço é destinado à sua descrição de perfil. Conta aqui quem
-              você é, gostos, hobbies e o que achar interessante. Descreve
-              também as características profissionais e o que te motivou a
-              ingressar na área do desenvolviemento de software.
+              Sou uma pessoa curiosa e que sempre busca entender como as coisas ao nosso redor funcionam.
+              Desde 2020, com o início da pândemia, decidi que deveria sair desse período melhor do que entrei 
+              e comecei a me aprofundar na área da tecnologia por meio de cursos introdutórios de backend e frontend, além de ingressar na Unisinos
+              para cursar Análise e Desenvolvimento de Sistemas.
             </p>
-            <p>
-              Você pode substituir a foto a lado pela sua melhor foto e colocar
-              suas redes nos botões abaixo!
-            </p>
+
+            <p>Atualmente estou no 5º semestre e ainda não trabalho na minha área de estudo. Meu foco é o desenvolvimento front-end e o aprendizado contínuo para conquistar o meu espaço e me desenvolver como profissional.</p>
+
             <s.ButtonGroup>
               <InputButton
                 outlined
                 type="button"
                 value="LinkedIn"
-                
+
                 onClick={() => {
                   //Aqui vai o seu perfil do linkedIn
                   window.open("https://linkedin.com/in/guilhermeflesch92", "_blank");
