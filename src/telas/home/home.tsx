@@ -86,7 +86,7 @@ const Home = () => {
         <TituloSecao titulo="Um pouco sobre mim..." />
 
         <s.Row>
-          <img src={FotoDePerfil} title="Foto linda do Guilherme" alt="Mostra um retrato da perfeição" />
+          <img src={FotoDePerfil} title="Foto de Guilherme" alt="Foto de perfil do Guilherme" />
           <s.Column>
             <h3>Guilherme Augusto Flesch</h3>
             <p>
